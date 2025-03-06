@@ -1,7 +1,6 @@
-
 import React from "react";
 import { cn } from "@/lib/utils";
-import { ExternalLink, Mail, Phone, RxActivityLog } from "lucide-react";
+import { ExternalLink, Mail, Phone, Activity } from "lucide-react";
 import GradientButton from "./ui/GradientButton";
 
 const footerLinks = [
@@ -20,7 +19,7 @@ const Footer = () => {
             <a href="/" className="flex items-center gap-2 mb-4">
               <span className="relative inline-block h-10 w-10 overflow-hidden">
                 <span className="absolute inset-0 flex items-center justify-center">
-                  <RxActivityLog className="h-8 w-8 text-cyber-blue" />
+                  <Activity className="h-8 w-8 text-cyber-blue" />
                 </span>
               </span>
               <div className="flex flex-col">

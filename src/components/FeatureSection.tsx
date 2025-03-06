@@ -1,11 +1,11 @@
 
 import React from "react";
 import BlurredCard from "./ui/BlurredCard";
-import { Activity, BookOpen, Calendar, FileText, Flask, Search, Shield, Users } from "lucide-react";
+import { Activity, BookOpen, Calendar, FileText, Beaker, Search, Shield, Users } from "lucide-react";
 
 const features = [
   {
-    icon: <Flask className="w-6 h-6 text-cyber-blue" />,
+    icon: <Beaker className="w-6 h-6 text-cyber-blue" />,
     title: "Clinical Trial Data Analysis",
     description: "Advanced data analysis and statistical modeling to identify trends, side effects, and effectiveness of pharmaceutical compounds."
   },
