@@ -8,7 +8,7 @@ import HowItWorks from "@/components/HowItWorks";
 import TestimonialSection from "@/components/TestimonialSection";
 import FaqSection from "@/components/FaqSection";
 import DisclaimerSection from "@/components/DisclaimerSection";
-import { RxActivityLog } from "react-icons/rx";
+import { Activity } from "lucide-react";
 
 const Index = () => {
   // Reference for scroll animation
@@ -88,7 +88,7 @@ const Index = () => {
           <div className="container mx-auto px-6 md:px-12">
             <div className="max-w-3xl mx-auto text-center mb-16 reveal">
               <div className="inline-flex items-center justify-center px-3 py-1 mb-6 border border-cyber-blue/30 rounded-full bg-cyber-blue/10 backdrop-blur-sm">
-                <RxActivityLog className="w-4 h-4 mr-2 text-cyber-blue" />
+                <Activity className="w-4 h-4 mr-2 text-cyber-blue" />
                 <span className="text-sm">Our Solutions</span>
               </div>
               
