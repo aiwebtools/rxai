@@ -9,6 +9,7 @@ import TestimonialSection from "@/components/TestimonialSection";
 import FaqSection from "@/components/FaqSection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import ProductShowcase from "@/components/ProductShowcase";
+import DisclaimerPopup from "@/components/DisclaimerPopup";
 import useScrollAnimations from "@/hooks/useScrollAnimations";
 import useSmoothScroll from "@/hooks/useSmoothScroll";
 
@@ -44,6 +45,9 @@ const Index = () => {
       </main>
       
       <Footer />
+      
+      {/* Disclaimer Popup */}
+      <DisclaimerPopup />
     </div>
   );
 };
