@@ -3,6 +3,8 @@ import { cn } from "@/lib/utils";
 import { ExternalLink, Mail, Phone, Activity } from "lucide-react";
 import GradientButton from "./ui/GradientButton";
 
+const AIWEBTOOLS_URL = "https://aiwebtools.lovable.app/?via=aiwebtools";
+
 const footerLinks = [
   { name: "Pharmaceutical Assistant GPT", href: "https://chatgpt.com/g/g-ZLpVaDzjI-pharmaceutical-assistant-gpt" },
   { name: "Pharma Research Pro", href: "https://chatgpt.com/g/g-GKBqblkrz-pharma-research-pro" },
@@ -14,8 +16,8 @@ const Footer = () => {
   return (
     <footer className="bg-cyber-darkblue/80 border-t border-white/10 pt-16 pb-8">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-4 mb-10">
-          <div className="col-span-1 md:col-span-1">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-4 mb-10">
+          <div className="col-span-1 sm:col-span-2 md:col-span-1">
             <a href="/" className="flex items-center gap-2 mb-4">
               <span className="relative inline-block h-10 w-10 overflow-hidden">
                 <span className="absolute inset-0 flex items-center justify-center">
@@ -25,7 +27,7 @@ const Footer = () => {
               <div className="flex flex-col">
                 <span className="font-bold text-xl text-white leading-none">RxAi</span>
                 <span className="text-xs text-cyber-blue/80">
-                  Presented by <a href="https://www.aiwebtools.ai" className="hover:text-cyber-blue transition-colors">AiWebTools.Ai</a>
+                  Presented by <a href={AIWEBTOOLS_URL} className="hover:text-cyber-blue transition-colors" target="_blank" rel="noopener noreferrer">AiWebTools.Ai</a>
                 </span>
               </div>
             </a>
@@ -37,14 +39,14 @@ const Footer = () => {
                 href="tel:4758008096"
                 className="flex items-center gap-2 text-sm hover:text-cyber-blue transition-colors"
               >
-                <Phone size={16} className="text-cyber-blue" />
+                <Phone size={16} className="text-cyber-blue shrink-0" />
                 (475) 800-8096
               </a>
               <a 
                 href="mailto:Contact@ai-webtools.com"
-                className="flex items-center gap-2 text-sm hover:text-cyber-blue transition-colors"
+                className="flex items-center gap-2 text-sm hover:text-cyber-blue transition-colors break-all"
               >
-                <Mail size={16} className="text-cyber-blue" />
+                <Mail size={16} className="text-cyber-blue shrink-0" />
                 Contact@ai-webtools.com
               </a>
             </div>
@@ -58,6 +60,7 @@ const Footer = () => {
                   <a 
                     href={link.href} 
                     className="text-sm text-muted-foreground hover:text-cyber-blue transition-colors"
+                    {...(link.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   >
                     {link.name}
                   </a>
@@ -73,14 +76,18 @@ const Footer = () => {
                 <a 
                   href="https://openai.com/policies/privacy-policy/" 
                   className="text-sm text-muted-foreground hover:text-cyber-blue transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Privacy Policy
                 </a>
               </li>
               <li>
                 <a 
-                  href="https://aiwebtools.ai/terms-of-services" 
+                  href={AIWEBTOOLS_URL}
                   className="text-sm text-muted-foreground hover:text-cyber-blue transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Terms of Service
                 </a>
@@ -90,7 +97,7 @@ const Footer = () => {
           
           <div className="col-span-1">
             <GradientButton
-              href="https://www.aiwebtools.ai"
+              href={AIWEBTOOLS_URL}
               variant="secondary"
               className="rounded-full flex items-center gap-2 mb-6"
             >
@@ -102,16 +109,18 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-muted-foreground">
-            <a href="https://www.aiwebtools.ai" className="hover:text-cyber-blue">
+        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-sm text-muted-foreground text-center md:text-left">
+            <a href={AIWEBTOOLS_URL} className="hover:text-cyber-blue" target="_blank" rel="noopener noreferrer">
               © 2025 AI WEB TOOLS LLC
             </a> All rights reserved.
           </p>
-          <div className="flex space-x-4 mt-4 md:mt-0">
+          <div className="flex space-x-4">
             <a 
-              href="https://www.aiwebtools.ai" 
+              href={AIWEBTOOLS_URL}
               className="text-sm text-muted-foreground hover:text-cyber-blue transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               More AI Tools
             </a>
